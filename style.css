@@ -1,0 +1,470 @@
+background-image: url(images/mig.png);	background-image: url(images/mig.png);	background-image: url(images/mig.png);@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Work+Sans:300,400,500,600,700');
+
+body {
+    color: #C33335;
+	font-family: 'Montserrat';
+		    -webkit-font-smoothing: antialiased;
+}
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+    color: royalblue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover, a:focus, a:active {
+    color: midnightblue;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+    list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Helper Utilities
+--------------------------------------------------------------*/
+.flex {
+    display: flex;
+}
+
+/*--------------------------------------------------------------
+# Outer Container
+--------------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+    .outer-container {
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .no-padding {
+        padding: 0;
+    }
+}
+
+/*
+# Site Branding
+--------------------------------*/
+.site-branding {
+    transition: all .5s;
+}
+
+.site-title {
+    margin: 0;
+    text-align: center;
+}
+
+.site-navigation .site-title a {
+    display: block;
+}
+
+
+
+
+
+/*
+  Hamburger Menu
+----------------------------------------*/
+.hamburger-menu .menu-icon,
+.hamburger-menu .menu-close-icon {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.hamburger-menu.close .menu-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu-close-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hamburger-menu.close .menu-close-icon {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hamburger-menu img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+# Site Navigation
+--------------------------------*/
+.site-navigation {
+    transition: all .5s;
+}
+
+/*
+# Main Menu
+--------------------------------*/
+.main-menu {
+    padding: 15px 30px;
+    margin: 0;
+	margin-bottom: 31%;
+}
+
+.main-menu li {
+    display: block;
+    padding: 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.main-menu li:nth-last-of-type(1) {
+    border-bottom: 0;
+}
+
+.main-menu li a {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+    transition: all 0.35s;
+	font-family: 'Montserrat';
+	font-weight: 600;
+}
+
+.main-menu li a:hover,
+.main-menu li.current-menu-item a {
+    color: black;
+}
+
+/*
+# Social Profiles
+--------------------------------*/
+
+.nav-bar-sep {
+    height: 78px;
+}
+
+@media screen and (max-width: 992px) {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 15px 30px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0,0,0,.09);
+    }
+
+    .site-header,
+    .hamburger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        flex-flow: column;
+    }
+
+    .hamburger-menu .menu-icon, .hamburger-menu .menu-close-icon {
+        position: absolute;
+        top: 26px;
+        right: 24px;
+    }
+
+    .main-menu li {
+        position: relative;
+		font-family: 'Montserrat';
+	font-weight: 600;
+    }
+
+    .main-menu li::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        right: 0;
+	font-family: 'Montserrat';
+	font-weight: 600;
+    }
+
+    .main-menu li:hover::after,
+    .main-menu li.current-menu-item::after {
+        color: #f0437e;
+    }
+
+    .site-navigation {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        height: 500px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0,0,0,.09);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s;
+    }
+
+    .site-navigation.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .social-profiles ul {
+        padding: 80px 15px 30px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .site-header,
+    .site-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 989;
+        width: 80px;
+        height: 100vh;
+        padding: 0 15px;
+        box-shadow: 6px 0 12px rgba(0,0,0,.05);
+    }
+
+    .site-navigation {
+        background: #f7f7f7;
+    }
+
+    .site-navigation.show {
+        left: 80px;
+    }
+
+    .site-header {
+        background: #FFFFFF;
+    }
+
+    .site-header.no-shadow {
+        box-shadow: none;
+    }
+
+    .site-header .site-branding.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .site-title {
+        padding: 28px 0 10px 0;
+    }
+
+    .hamburger-menu .menu-icon,
+    .hamburger-menu .menu-close-icon {
+        position: absolute;
+        top: calc(50vh - 22px);
+        left: 15px;
+        width: calc(100% - 30px);
+        padding: 10px 0;
+    }
+
+    .site-navigation {
+        left: -250px;
+        z-index: 99;
+        width: 250px;
+        padding: 0;
+        box-shadow: 16px 0 42px rgba(0,0,0,.09);
+    }
+
+    .main-menu {
+        height: calc(100vh - 160px);
+        padding: 0;
+    }
+
+    .main-menu li {
+        border-bottom: 0;
+        text-align: center;
+    }
+
+    .social-profiles ul li {
+        font-size: 1.125rem;
+    }
+}
+
+.portfolio-page .scroll-down {
+    margin-left: -60px;
+}
+
+.portfolio-content {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.home-page {
+    padding-top: 15px;
+}
+
+.home-page .portfolio-content {
+    margin-bottom: 15px;
+}
+
+.portfolio-content figure {
+    margin: 0;
+	
+}
+
+.portfolio-content figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+  border-radius: 15px;
+	margin-top: 10px;
+
+}
+
+.portfolio-content .entry-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s;
+
+	
+}
+
+.portfolio-content:hover .entry-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 0;
+	    font-family: 'Montserrat';
+	font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.home-page .portfolio-content h3 {
+    font-size: 2.25rem;
+}
+
+.portfolio-content h3 a {
+    color: #191919;
+	font-weight: 800;
+}
+
+.portfolio-content ul {
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+
+.portfolio-content li {
+    margin: 0 3px;
+}
+
+.portfolio-content li a {
+    font-size: 0.875rem;
+    color: #a6a6a6;
+}
+
+@media screen and (min-width: 768px) {
+    .home-page {
+        padding: 0;
+    }
+
+    .home-page .portfolio-content {
+        margin-bottom: 0;
+    }
+}
+
+.outer-container{
+		margin-top: 5%;
+
+}
+
+.title1{
+	font-family: 'Montserrat';
+	font-weight: 600;
+	margin-left: 10.5%;
+	padding-top:2%;
+	font-size: 1.2em;
+        z-index: 997;
+}
+
+.title2{
+	font-family: 'Montserrat';
+	margin-left: 10.5%;
+	line-height: 0.4;
+	font-weight: 100;
+	font-size: 1em;
+        z-index: 998;
+}
+
+.round {
+  height: 85px;
+  width: 85px;
+  background-image: url(images/mig.png);
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+	margin-top: 1%;
+}
+
+.design{
+	margin-top: 2%;
+	padding-left: 18px;
+	padding-right: 15px;
+}
+
+.design3{
+	margin-top: 2%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.design1{
+	margin-top: 2%;
+	}
+
+.ui{
+	font-family: 'Montserrat';
+	font-weight: 500;
+	text-align: left;
+	margin-left: 2.5%;
+	position: absolute;
+
+}
+
+.web{
+	font-family: 'Montserrat';
+	font-weight: 500;
+	margin-left: 1.5%;
+	text-align: left;
+}
+
+.gta{
+	font-family: 'Montserrat';
+	font-weight: 500;
+	margin-left: 1.5%;
+	text-align: left;
+}
+
+.lines{
+	color:red;
+}
+
+
+
